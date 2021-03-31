@@ -1,0 +1,38 @@
+python类初始化后，调用init,直接对象名(参数1，参数2)
+pthon爬虫步骤：
+     1. 查找url，分析url返回页面的html格式
+	 2. 用xpath或正则选出选出需要的信息 reg2 = r'data-original="(.*?)"'
+	 3. os流储存需要的信息
+	 4. 解决反爬
+	 5. 加上time包，不频繁访问，设置时间间隔time.sleep(10)
+	 6. res_js = requests.get(url_js,headers=headers).content.decode('UTF-8')
+	    解码方式：gbk  UTF-8
+	 7. re.findall(正则式,html页面) 正则式需要编译,re.compile(正则式)
+	 8. 有的页面会有层级关系 ./ / ../等等
+	 9. 爬取视频也会有url信息，输入就会下载
+	 10. href貌似是一个超链接，给后续紧跟着的标题
+	 11. 动态网页，利用ajax技术使用js接口传递数据（不会）
+	 11. iframe反爬虫
+XPath方法
+     1. htm1 = requests.get(url, headers=headers).content	
+     2.  selector = etree.HTML(htm1)
+	 3.  content = selector.xpath('//*[@id="content_views"]/p[21]/text()')
+	   对3进行一个解释，'/text()'前面是用xpath得到的，"ctrl+shift+x" copy到xpath
+	 4. 就可以获得了
+	 5. xpath安装方法：下载.crx文件，改成rar文件。再解压，CHROME打开开发者模式，
+	    添加即可
+	 6. 通过使用'//div/a'直接暴力搜查所有标签获得元素
+	 7. 文字编码问题：在存储新婚小说中，解决换行的问题即可。
+	 8. tbody标签，可以删去。常没用或者唯一
+	 9. 通过属性查询 ./@src(查询结点下的src属性)
+	 10. 通过实验证实，标签与标签之间层级关系很重要。
+模拟登录：
+在下载图片的时候，遇到一个问题：浏览器能打开，但是request无法解析。相对路径的问题。
+爬取到的图片特别小，700字节 ，占4个kb。无法打开
+遇到打不开的文件用记事本打开，实际上是一个“糟了，页面找不到了”
+
+解决办法：urljoin(原网址,相对路径网址)
+下载付费视频（够呛）：
+进行一个总结（关于./  ../）：
+"./"代表目前所在目录   ".../"是父级目录 "/"是根目录 "../"是上级目录
+/代表根结点

@@ -1,0 +1,42 @@
+http://www.92kshu.xyz/178082/1-x.html
+http://www.92kshu.xyz/178082/2.html
+http://www.92kshu.xyz/178082/3.html
+下一页:【】（1）(1/3)</a>
+':【】（1）（1/(.*?)）</a>'
+page_go2();
+
+</ a>< a href="/178082/1-2.html">下一页:【】（1）(1/3)</ a>（快捷键→）
+</div><div class="page_go"><script type="text/javascript">page_go2();
+
+# 爬取新婚小说
+import requests
+from lxml import etree
+url_1 = 'http://www.92kshu.xyz/178082/'
+url_4 = '.html'
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0'
+}
+def return_num(url2):
+    url = url_1 + str(url2) + url_4
+    htm1 = requests.get(url, headers=headers).content
+    selector = etree.HTML(htm1)
+    content = selector.xpath('//div/a/text()')
+    STR = content[len(content)-1]
+    nums = STR[len(STR)-2]
+    return int(nums)
+def get_msg(nums,nums_sub):
+    url = url_1 + str(nums) + '-' + str(nums_sub) + url_4
+    htm1 = requests.get(url, headers=headers).content
+    selector = etree.HTML(htm1)
+    content = selector.xpath('//div/p/text()')
+    f = open('新婚.txt', 'a')
+    f.write('第' + str(nums) + '章' + '第' + str(nums_sub) + '小节' + '\n')
+    for i in range(0, len(content)):
+        f.write(str(content[i]))
+        f.write('\n')
+    f.close()
+if  __name__ == '__main__':
+    for i in range(1, 16): # 先小幅度调试
+        nums_sub = return_num(i)
+        for j in range(1, nums_sub + 1):
+            get_msg(i, j)

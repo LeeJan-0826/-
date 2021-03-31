@@ -1,0 +1,14 @@
+1.git init 
+2.git add . 或者 git add 文件名
+3.git commit -m "注释内容"
+4.git remote add origin ....
+5.git branch -M main
+6.git push -u origin main（有了-u，就可以以后直接 git add 了）
+git给出了两种方法传递仓库1.已经存在的仓库，2.创造一个新的仓库。
+.gitignore文件:
+                 /文件名：就可以把该文件全部不上传、
+				 *.txt:就可以忽略后缀为.txt的文件
+				 !/classer/a.class: 不忽略classes目录下的a.class文件
+git clone git仓库地址 --depth=1 ：解决github下载速度过慢
+7.不要重复提交代码
+ 

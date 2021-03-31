@@ -1,0 +1,796 @@
+Menber_Function
+enum PaintDeviceMetric
+
+enum RenderFlag
+
+flags RenderFlags
+
+acceptDrops() const : bool
+
+accessibleDescription() const : QString
+
+accessibleName() const : QString
+
+actionEvent(QActionEvent *)
+
+actions() const : QList<QAction *>
+
+activateWindow()
+
+addAction(QAction *)
+
+addActions(QList<QAction *> )
+
+adjustSize()
+
+autoFillBackground() const : bool
+
+backgroundRole() const : QPalette::ColorRole
+
+backingStore() const : QBackingStore *
+
+baseSize() const : QSize
+
+changeEvent(QEvent *)
+
+childAt(int , int ) const : QWidget *
+
+childAt(const QPoint &) const : QWidget *
+
+childEvent(QChildEvent *)
+
+childrenRect() const : QRect
+
+childrenRegion() const : QRegion
+
+clearFocus()
+
+clearMask()
+
+close() : bool
+
+closeEvent(QCloseEvent *)
+
+connectNotify(const QMetaMethod &)
+
+contentsMargins() const : QMargins
+
+contentsRect() const : QRect
+
+contextMenuEvent(QContextMenuEvent *)
+
+contextMenuPolicy() const : Qt::ContextMenuPolicy
+
+create(WId , bool , bool )
+
+createWindowContainer(QWindow *, QWidget *, Qt::WindowFlags ) : QWidget *
+
+cursor() const : QCursor
+
+customContextMenuRequested(const QPoint &)
+
+customEvent(QEvent *)
+
+deleteLater()
+
+destroy(bool , bool )
+
+destroyed(QObject *)
+
+disconnectNotify(const QMetaMethod &)
+
+dragEnterEvent(QDragEnterEvent *)
+
+dragLeaveEvent(QDragLeaveEvent *)
+
+dragMoveEvent(QDragMoveEvent *)
+
+dropEvent(QDropEvent *)
+
+dumpObjectInfo() const
+
+dumpObjectTree() const
+
+effectiveWinId() const : WId
+
+ensurePolished() const
+
+enterEvent(QEvent *)
+
+event(QEvent *) : bool
+
+focusInEvent(QFocusEvent *)
+
+focusNextChild() : bool
+
+focusNextPrevChild(bool ) : bool
+
+focusOutEvent(QFocusEvent *)
+
+focusPolicy() const : Qt::FocusPolicy
+
+focusPreviousChild() : bool
+
+focusProxy() const : QWidget *
+
+focusWidget() const : QWidget *
+
+font() const : const QFont &
+
+fontInfo() const : QFontInfo
+
+fontMetrics() const : QFontMetrics
+
+foregroundRole() const : QPalette::ColorRole
+
+frameGeometry() const : QRect
+
+frameSize() const : QSize
+
+geometry() const : const QRect &
+
+grab(const QRect &) : QPixmap
+
+grabGesture(Qt::GestureType , Qt::GestureFlags )
+
+grabKeyboard()
+
+grabMouse()
+
+grabMouse(const QCursor &)
+
+grabShortcut(const QKeySequence &, Qt::ShortcutContext ) : int
+
+graphicsEffect() const : QGraphicsEffect *
+
+graphicsProxyWidget() const : QGraphicsProxyWidget *
+
+hasEditFocus() const : bool
+
+hasFocus() const : bool
+
+hasHeightForWidth() const : bool
+
+hasMouseTracking() const : bool
+
+hasTabletTracking() const : bool
+
+height() const : int
+
+heightForWidth(int ) const : int
+
+hide()
+
+hideEvent(QHideEvent *)
+
+initPainter(QPainter *) const
+
+inputMethodEvent(QInputMethodEvent *)
+
+inputMethodHints() const : Qt::InputMethodHints
+
+inputMethodQuery(Qt::InputMethodQuery ) const : QVariant
+
+insertAction(QAction *, QAction *)
+
+insertActions(QAction *, QList<QAction *> )
+
+installEventFilter(QObject *)
+
+isActiveWindow() const : bool
+
+isAncestorOf(const QWidget *) const : bool
+
+isEnabled() const : bool
+
+isEnabledTo(const QWidget *) const : bool
+
+isFullScreen() const : bool
+
+isHidden() const : bool
+
+isMaximized() const : bool
+
+isMinimized() const : bool
+
+isModal() const : bool
+
+isVisible() const : bool
+
+isVisibleTo(const QWidget *) const : bool
+
+isWindow() const : bool
+
+isWindowModified() const : bool
+
+keyPressEvent(QKeyEvent *)
+
+keyReleaseEvent(QKeyEvent *)
+
+keyboardGrabber() : QWidget *
+
+killTimer(int )
+
+layout() const : QLayout *
+
+layoutDirection() const : Qt::LayoutDirection
+
+leaveEvent(QEvent *)
+
+locale() const : QLocale
+
+lower()
+
+mapFrom(const QWidget *, const QPoint &) const : QPoint
+
+mapFromGlobal(const QPoint &) const : QPoint
+
+mapFromParent(const QPoint &) const : QPoint
+
+mapTo(const QWidget *, const QPoint &) const : QPoint
+
+mapToGlobal(const QPoint &) const : QPoint
+
+mapToParent(const QPoint &) const : QPoint
+
+mask() const : QRegion
+
+maximumHeight() const : int
+
+maximumSize() const : QSize
+
+maximumWidth() const : int
+
+metaObject() const : const QMetaObject *
+
+metric(QPaintDevice::PaintDeviceMetric ) const : int
+
+minimumHeight() const : int
+
+minimumSize() const : QSize
+
+minimumSizeHint() const : QSize
+
+minimumWidth() const : int
+
+mouseDoubleClickEvent(QMouseEvent *)
+
+mouseGrabber() : QWidget *
+
+mouseMoveEvent(QMouseEvent *)
+
+mousePressEvent(QMouseEvent *)
+
+mouseReleaseEvent(QMouseEvent *)
+
+move(const QPoint &)
+
+move(int , int )
+
+moveEvent(QMoveEvent *)
+
+moveToThread(QThread *)
+
+nativeEvent(const QByteArray &, void *, long *) : bool
+
+nativeParentWidget() const : QWidget *
+
+nextInFocusChain() const : QWidget *
+
+normalGeometry() const : QRect
+
+objectNameChanged(const QString &)
+
+overrideWindowFlags(Qt::WindowFlags )
+
+paintEngine() const : QPaintEngine *
+
+paintEvent(QPaintEvent *)
+
+palette() const : const QPalette &
+
+parentWidget() const : QWidget *
+
+pos() const : QPoint
+
+previousInFocusChain() const : QWidget *
+
+raise()
+
+rect() const : QRect
+
+releaseKeyboard()
+
+releaseMouse()
+
+releaseShortcut(int )
+
+removeAction(QAction *)
+
+removeEventFilter(QObject *)
+
+render(QPaintDevice *, const QPoint &, const QRegion &, QWidget::RenderFlags )
+
+render(QPainter *, const QPoint &, const QRegion &, QWidget::RenderFlags )
+
+repaint()
+
+repaint(int , int , int , int )
+
+repaint(const QRect &)
+
+repaint(const QRegion &)
+
+resize(const QSize &)
+
+resize(int , int )
+
+resizeEvent(QResizeEvent *)
+
+restoreGeometry(const QByteArray &) : bool
+
+saveGeometry() const : QByteArray
+
+scroll(int , int )
+
+scroll(int , int , const QRect &)
+
+setAcceptDrops(bool )
+
+setAccessibleDescription(const QString &)
+
+setAccessibleName(const QString &)
+
+setAttribute(Qt::WidgetAttribute , bool )
+
+setAutoFillBackground(bool )
+
+setBackgroundRole(QPalette::ColorRole )
+
+setBaseSize(const QSize &)
+
+setBaseSize(int , int )
+
+setContentsMargins(int , int , int , int )
+
+setContentsMargins(const QMargins &)
+
+setContextMenuPolicy(Qt::ContextMenuPolicy )
+
+setCursor(const QCursor &)
+
+setDisabled(bool )
+
+setEditFocus(bool )
+
+setEnabled(bool)
+
+setFixedHeight(int )
+
+setFixedSize(const QSize &)
+
+setFixedSize(int , int )
+
+setFixedWidth(int )
+
+setFocus(Qt::FocusReason )
+
+setFocus()
+
+setFocusPolicy(Qt::FocusPolicy )
+
+setFocusProxy(QWidget *)
+
+setFont(const QFont &)
+
+setForegroundRole(QPalette::ColorRole )
+
+setGeometry(const QRect &)
+
+setGeometry(int , int , int , int )
+
+setGraphicsEffect(QGraphicsEffect *)
+
+setHidden(bool )
+
+setInputMethodHints(Qt::InputMethodHints )
+
+setLayout(QLayout *)
+
+setLayoutDirection(Qt::LayoutDirection )
+
+setLocale(const QLocale &)
+
+setMask(const QBitmap &)
+
+setMask(const QRegion &)
+
+setMaximumHeight(int )
+
+setMaximumSize(const QSize &)
+
+setMaximumSize(int , int )
+
+setMaximumWidth(int )
+
+setMinimumHeight(int )
+
+setMinimumSize(const QSize &)
+
+setMinimumSize(int , int )
+
+setMinimumWidth(int )
+
+setMouseTracking(bool )
+
+setObjectName(const QString &)
+
+setPalette(const QPalette &)
+
+setParent(QWidget *)
+
+setParent(QWidget *, Qt::WindowFlags )
+
+setShortcutAutoRepeat(int , bool )
+
+setShortcutEnabled(int , bool )
+
+setSizeIncrement(const QSize &)
+
+setSizeIncrement(int , int )
+
+setSizePolicy(QSizePolicy)
+
+setSizePolicy(QSizePolicy::Policy , QSizePolicy::Policy )
+
+setStatusTip(const QString &)
+
+setStyle(QStyle *)
+
+setStyleSheet(const QString &)
+
+setTabOrder(QWidget *, QWidget *)
+
+setTabletTracking(bool )
+
+setText(const QString &)
+
+setToolTip(const QString &)
+
+setToolTipDuration(int )
+
+setUpdatesEnabled(bool )
+
+setVisible(bool )
+
+setWhatsThis(const QString &)
+
+setWindowFilePath(const QString &)
+
+setWindowFlag(Qt::WindowType , bool )
+
+setWindowFlags(Qt::WindowFlags )
+
+setWindowIcon(const QIcon &)
+
+setWindowModality(Qt::WindowModality )
+
+setWindowModified(bool)
+
+setWindowOpacity(qreal )
+
+setWindowRole(const QString &)
+
+setWindowState(Qt::WindowStates )
+
+setWindowTitle(const QString &)
+
+setupUi(QWidget *)
+
+show()
+
+showEvent(QShowEvent *)
+
+showFullScreen()
+
+showMaximized()
+
+showMinimized()
+
+showNormal()
+
+size() const : QSize
+
+sizeHint() const : QSize
+
+sizeIncrement() const : QSize
+
+sizePolicy() const : QSizePolicy
+
+stackUnder(QWidget *)
+
+statusTip() const : QString
+
+style() const : QStyle *
+
+styleSheet() const : QString
+
+tabletEvent(QTabletEvent *)
+
+testAttribute(Qt::WidgetAttribute ) const : bool
+
+timerEvent(QTimerEvent *)
+
+toolTip() const : QString
+
+toolTipDuration() const : int
+
+tr(const char *, const char *, int ) : QString
+
+underMouse() const : bool
+
+ungrabGesture(Qt::GestureType )
+
+unsetCursor()
+
+unsetLayoutDirection()
+
+unsetLocale()
+
+update()
+
+update(int , int , int , int )
+
+update(const QRect &)
+
+update(const QRegion &)
+
+updateGeometry()
+
+updateMicroFocus()
+
+updatesEnabled() const : bool
+
+visibleRegion() const : QRegion
+
+whatsThis() const : QString
+
+wheelEvent(QWheelEvent *)
+
+width() const : int
+
+winId() const : WId
+
+window() const : QWidget *
+
+windowFilePath() const : QString
+
+windowFlags() const : Qt::WindowFlags
+
+windowHandle() const : QWindow *
+
+windowIcon() const : QIcon
+
+windowIconChanged(const QIcon &)
+
+windowModality() const : Qt::WindowModality
+
+windowOpacity() const : qreal
+
+windowRole() const : QString
+
+windowState() const : Qt::WindowStates
+
+windowTitle() const : QString
+
+windowTitleChanged(const QString &)
+
+windowType() const : Qt::WindowType
+
+x() const : int
+
+y() const : int
+
+
+不同之处：
+
+Menber_Function
+QPushButton(QWidget *)
+
+QPushButton(const QString &, QWidget *)
+
+QPushButton(const QIcon &, const QString &, QWidget *)
+
+~QPushButton()
+
+animateClick(int )
+
+autoDefault() const : bool
+
+autoExclusive() const : bool
+
+autoRepeat() const : bool
+
+autoRepeatDelay() const : int
+
+autoRepeatInterval() const : int
+
+blockSignals(bool )
+
+checkStateSet()
+
+children() const
+
+click()
+
+clicked(bool )
+
+colorCount() const
+
+connect(const QObject *, const QMetaMethod &, const QObject *, const QMetaMethod &, Qt::ConnectionType )
+
+connect(const QObject *, const char *, const char *, Qt::ConnectionType ) const
+
+connect(const QObject *, PointerToMemberFunction , const QObject *, PointerToMemberFunction , Qt::ConnectionType )
+
+connect(const QObject *, PointerToMemberFunction , Functor )
+
+connect(const QObject *, PointerToMemberFunction , const QObject *, Functor , Qt::ConnectionType )
+
+d_ptr : 
+
+depth() const
+
+devicePixelRatio() const
+
+devicePixelRatioF() const
+
+disconnect(const QMetaObject::Connection &)
+
+disconnect(const char *, const QObject *, const char *) const
+
+disconnect(const QObject *, const char *) const
+
+disconnect(const QObject *, PointerToMemberFunction , const QObject *, PointerToMemberFunction )
+
+dynamicPropertyNames() const
+
+eventFilter(QObject *, QEvent *)
+
+find(WId ) : QWidget *
+
+findChild(const QString &, Qt::FindChildOptions ) const
+
+findChildren(const QString &, Qt::FindChildOptions ) const
+
+findChildren(const QRegExp &, Qt::FindChildOptions ) const
+
+findChildren(const QRegularExpression &, Qt::FindChildOptions ) const
+
+getContentsMargins(int *, int *, int *, int *) const
+
+group() const : QButtonGroup *
+
+heightMM() const
+
+hitButton(const QPoint &) const : bool
+
+icon() const : QIcon
+
+iconSize() const : QSize
+
+inherits(const char *) const
+
+initStyleOption(QStyleOptionButton *) const
+
+isCheckable() const : bool
+
+isChecked() const : bool
+
+isDefault() const : bool
+
+isDown() const : bool
+
+isFlat() const : bool
+
+isSignalConnected(const QMetaMethod &) const
+
+isWidgetType() const
+
+isWindowType() const
+
+logicalDpiX() const
+
+logicalDpiY() const
+
+menu() const : QMenu *
+
+nextCheckState()
+
+objectName() const
+
+painters : 
+
+paintingActive() const
+
+parent() const
+
+physicalDpiX() const
+
+physicalDpiY() const
+
+pressed()
+
+property(const char *) const
+
+qt_metacall(QMetaObject::Call, int, void **) : int
+
+qt_metacast(const char *) : void *
+
+receivers(const char *) const
+
+released()
+
+sender() const
+
+senderSignalIndex() const
+
+setAutoDefault(bool)
+
+setAutoExclusive(bool)
+
+setAutoRepeat(bool)
+
+setAutoRepeatDelay(int)
+
+setAutoRepeatInterval(int)
+
+setCheckable(bool)
+
+setChecked(bool)
+
+setDefault(bool)
+
+setDown(bool)
+
+setFlat(bool)
+
+setIcon(const QIcon &)
+
+setIconSize(const QSize &)
+
+setMenu(QMenu *)
+
+setProperty(const char *, const QVariant &)
+
+setShortcut(const QKeySequence &)
+
+setWindowIconText(const QString &)
+
+shortcut() const : QKeySequence
+
+showMenu()
+
+signalsBlocked() const
+
+startTimer(int , Qt::TimerType )
+
+startTimer(std::chrono::milliseconds , Qt::TimerType )
+
+staticMetaObject : const QMetaObject
+
+staticQtMetaObject : 
+
+text() const : QString
+
+thread() const
+
+toggle()
+
+toggled(bool )
+
+trUtf8(const char *, const char *, int ) : QString
+
+widthMM() const
+
+windowIconText() const : QString

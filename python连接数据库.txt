@@ -1,0 +1,22 @@
+1. pip install PyMySQL(连接数据库)
+2. 台式电脑没有安装MySQL,安装：
+							密码是LeeJan0826.用户名是root
+							需要一个GUI界面。
+							添加环境变量，%MYSQL_HOME%，再加bin
+3.创建新表：
+数据库demo1,表名test
+4. python连接数据库：
+db = pymysql.connect(host=dbhost,user=dbuser,password=dbpass,database=dbname)
+5. 关于提交的问题：
+					SQLyog上的REfersh更新表内容
+					python中需要手动commit。
+6.编写sql语句，利用"""aaa{0}aaa""".format(1)用"1"代替{0}
+7.解决字符串传不进去MySQL的问题	:
+					INSERT INTO test VALUES (11, 'ajjjj')(不挑哪一列插入，全插)
+8.发现一个问题：当USE 数据库名称;这句sql语句紧跟着创表操作会失败。
+所以隔开比较好
+9. 数据写入有点小问题。表创建好后无法写入	
+10.发现了问题所在，有的字符串他是MySQL的关键字，需要前后加一个''
+11.还是会出现8所述的问题。解决方案暂时没有。只能隔开
+		可能这就是并发的问题
+12. 

@@ -1,0 +1,6 @@
+JDBC：java用于解决Mysql
+CSS：引入CSS，控制html的布局和样式
+JS:运行在浏览器中，给html和用户的交互，交互性更强
+XML：可扩展标记语言，文本开头
+前端：静态有xml，html动态有JS，php
+前端和数据库相结合。

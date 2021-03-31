@@ -1,0 +1,46 @@
+yolov5实操（colab）
+1. 采用人马图片，图片即标签，即不再进行标签化
+2. 下载yolov5模型，新建dataset文件夹，放置images，val子文件夹
+3. 登录谷歌云盘，硬件加速器选择GPU
+4. 点击右上角的 连接，选择 连接到托管代码执行程序
+5. !nvidia-smi查看申请到GPU命令
+6. pip install requires.txt
+7. 
+    import os
+	from google.colab import drive
+	drive.mount('/content/drive')
+8. 输入验证码
+9. 修改yolov5s.yaml下的nc:并修改[]列表内容
+10. 通过修改一系列参数来执行train.py
+  !python train.py --data ../mask/data.yaml --cfg models/yolov5s.yaml --weights '' --batch-size 64
+11. 谷歌云盘地址  https://drive.google.com
+12. 删除360，会防止墙裂的翻墙。
+13. tf,torch,cv2,np,yaml, __version__(检查版本符合要求)
+    其中对yaml进行了升级       !pip install -U pyyaml
+14. 上传文件至colab云盘，上传文件夹。
+15. 修改yolov5s.yaml下的nc为2.
+16. '--cfg', type=str, default='models/yolov5s.yaml'修改参数
+17. --weights 给定初始权重  cfg,data,weights一定要传的参数
+18. 下载.pt文件。双击weights下的.sh文件
+19. cd到train的目录下执行python文件
+19. !python train.py
+20. !pip install wandb  (recommed)
+21. 将thop注释掉，因为不知道什么意思 //不知道是什么，全部安装即可
+22. 创建了一个wandb账号，因为需要数据可视化，账号名称LeeJan0826
+23. 未找到数据 ['/content/drive/MyDrive/coco128/images/train2017']
+24. 
+from google.colab import drive
+drive.mount('/content/drive')
+import os
+os.chdir("/content/drive/MyDrive/horse")
+cd /content/drive/MyDrive/horse
+!pip install -r requirements.txt
+!python train.py
+	
+25. 	txt文件出错，没有写好框的大小
+	
+25. 出现全部图像损坏的情况，未知原因
+ValueError: zero-size array to reduction operation maximum which has
+ no identity
+26. txt文件最好以'\n'结尾因为很多时候读取txt的时候是以\n结尾的
+27. 断掉网络
